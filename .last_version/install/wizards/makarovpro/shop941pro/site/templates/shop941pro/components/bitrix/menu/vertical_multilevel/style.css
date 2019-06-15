@@ -1,0 +1,45 @@
+.left-menu {
+	margin-top: 16px;
+}
+.left-menu ul {
+	position: relative;
+	border-radius: 5px;
+	background: #EDEDED;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+.left-menu ul li {
+	position: relative;
+	color: #444444;
+	list-style: none;
+}
+.left-menu ul li a {
+	display: block;
+	padding-top: 16px;
+	padding-right: 20px;
+	padding-bottom: 16px;
+	padding-left: 20px;
+	border-bottom: 1px #999999 dotted;
+	background: rgba(255, 255, 255, 0);
+	color: #444444;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 #FFF;
+	transition-duration: 500ms;
+	transition-property: background;
+}
+.left-menu ul li:last-child a {
+	border-bottom: none;
+}
+.root-item-selected {
+	background: rgba(255, 255, 255, 0.5) !important;
+}
+.left-menu ul li ul {
+	position: absolute;
+	right: 9999px;
+}
+.left-menu ul li:hover ul {
+	position: absolute;
+	top: 0;
+	right: -220px;
+	z-index: 1000;
+	width: 240px;
+}
