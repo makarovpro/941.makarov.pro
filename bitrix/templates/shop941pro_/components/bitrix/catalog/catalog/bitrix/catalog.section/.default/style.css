@@ -1,0 +1,95 @@
+.catalog-section {
+	width: 102%;
+}
+.catalog-section li {
+	float: left;
+	width: 23%;
+	margin-right: 2%;
+	margin-bottom: 5%;
+	height: 240px;
+	list-style: none;
+	box-shadow: 0 0 5px rgba(0,0,0, 0.4);
+	overflow: hidden;
+	position: relative;
+}
+.catalog-section li div.picture {
+	height: 150px;
+	overflow: hidden;
+}
+.catalog-section li h3 {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: normal;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.catalog-section li:nth-child(4) {
+	margin-right: 0;
+}
+.catalog-section li div.price {
+	color: #FFF;
+        width: 100%;
+	position: absolute;
+	bottom: 0;
+	border-collapse: collapse;
+	height: 30px;
+	line-height: 30px;
+        text-align: center;
+}
+.catalog-section li div.price a {
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+        text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+.catalog-section li div.price a span {
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background: rgba(255,255,255, 0);
+	transition-duration: 500ms;
+	transition-property: background;
+}
+.catalog-section li div.hover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 150px;
+	z-index: 10;
+	text-indent: -9999px;
+	background: rgba(255,255,255, 0);
+	transition-duration: 500ms;
+	transition-property: background;
+}
+.catalog-section li div.hover a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 150px;
+	text-decoration: none;
+	color: #FFF;
+}
+.catalog-section li div.hover span {
+	padding: 7px;
+	margin: 0 auto;
+	margin-top: 65px;
+	display: block;
+	width: 70%;
+	text-align: center;
+	border-radius: 5px;
+}
+.catalog-section li div.picture:hover div.hover span {
+	color: #FFF;
+	background: rgba(0,0,0, 0.6);
+	transition-duration: 500ms;
+	transition-property: background;
+	text-indent: 0;
+}
+.catalog-section li div.picture:hover div.hover {
+	background: rgba(255,255,255, 0.5);
+	cursor: pointer;
+}
