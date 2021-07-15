@@ -142,18 +142,18 @@ $APPLICATION->IncludeFile(
 <script type="text/javascript" src="//yandex.st/share/share.js"
 charset="utf-8"></script>
 
-	<?if($USER->IsAdmin()):?>
+<? if ($USER->IsAdmin()): ?>
+<? else: ?>
 
-	<? else: ?>
+    <script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b17186540/crm/site_button/loader_5_r5kz34.js');
+</script>
+<script type="text/javascript" src="//cp.onicon.ru/loader/5cdfbb06b887ee631a8b492e.js"></script>
 
-		<script>
-		        (function(w,d,u){
-		                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-		                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-		        })(window,document,'https://cdn-ru.bitrix24.ru/b134391/crm/site_button/loader_2_ybcht0.js');
-		</script>
-
-	<?endif?>
+<?endif?>
 
 </body>
 </html>
