@@ -1,11 +1,11 @@
 </div>
 </div>
 
-<? if ($APPLICATION->GetCurPage(false) == SITE_DIR): ?>
-<div class="right">
-	<div id="content_1" class="content">
+<? if ($APPLICATION->GetCurPage(false) == SITE_DIR): ?> 
+	<div class="right">
+		<div id="content_1" class="content">
 
-		<?
+			<?
 			$APPLICATION->IncludeComponent(
 					"bitrix:main.include", "", Array(
 				"AREA_FILE_SHOW" => "file",
@@ -16,18 +16,20 @@
 			);
 			?>
 
+		</div>
 	</div>
-</div>
 
 <? else: ?>
 
+
 <? endif ?>
+
 
 </section>
 <footer>
 	<nav>
 
-		<?
+<?
 $APPLICATION->IncludeComponent("bitrix:menu", "horizontal_multilevel", array(
 	"ROOT_MENU_TYPE" => "bottom",
 	"MAX_LEVEL" => "1",
@@ -45,7 +47,7 @@ $APPLICATION->IncludeComponent("bitrix:menu", "horizontal_multilevel", array(
 
 	</nav>
 
-	<?
+<?
 $APPLICATION->IncludeFile(
 		SITE_DIR . "include/footer.php", Array(), Array("MODE" => "html")
 );
@@ -56,7 +58,7 @@ $APPLICATION->IncludeFile(
 	$(window).load(function () {
 		$('#slider').nivoSlider();
 	});
-</script>
+</script> 
 <script type="text/javascript">
 	(function ($) {
 		$(window).load(function () {
@@ -66,37 +68,27 @@ $APPLICATION->IncludeFile(
 				}
 			});
 			$("#content_1").hover(function () {
-				$(document).data({
-					"keyboard-input": "enabled"
-				});
+				$(document).data({"keyboard-input": "enabled"});
 				$(this).addClass("keyboard-input");
 			}, function () {
-				$(document).data({
-					"keyboard-input": "disabled"
-				});
+				$(document).data({"keyboard-input": "disabled"});
 				$(this).removeClass("keyboard-input");
 			});
 			$(document).keydown(function (e) {
 				if ($(this).data("keyboard-input") === "enabled") {
 					var activeElem = $(".keyboard-input"),
-						activeElemPos = Math.abs($(".keyboard-input .mCSB_container").position().top),
-						pixelsToScroll = 60;
+							activeElemPos = Math.abs($(".keyboard-input .mCSB_container").position().top),
+							pixelsToScroll = 60;
 					if (e.which === 38) { //scroll up
 						e.preventDefault();
 						if (pixelsToScroll > activeElemPos) {
 							activeElem.mCustomScrollbar("scrollTo", "top");
 						} else {
-							activeElem.mCustomScrollbar("scrollTo", (activeElemPos - pixelsToScroll), {
-								scrollInertia: 400,
-								scrollEasing: "easeOutCirc"
-							});
+							activeElem.mCustomScrollbar("scrollTo", (activeElemPos - pixelsToScroll), {scrollInertia: 400, scrollEasing: "easeOutCirc"});
 						}
 					} else if (e.which === 40) { //scroll down
 						e.preventDefault();
-						activeElem.mCustomScrollbar("scrollTo", (activeElemPos + pixelsToScroll), {
-							scrollInertia: 400,
-							scrollEasing: "easeOutCirc"
-						});
+						activeElem.mCustomScrollbar("scrollTo", (activeElemPos + pixelsToScroll), {scrollInertia: 400, scrollEasing: "easeOutCirc"});
 					}
 				}
 			});
@@ -128,38 +120,40 @@ $APPLICATION->IncludeFile(
 	(jQuery)
 </script>
 
+
+
 <script type="text/javascript">
 	$("#tabs2").tabs({
 		show: function (event, ui) {
 			var $target = $(ui.panel);
 
 			$('.content:visible').effect(
-				'explode', {},
-				1500,
-				function () {
-					$target.fadeIn();
-				});
+					'explode',
+					{},
+					1500,
+					function () {
+						$target.fadeIn();
+					});
 		}
 	});
-</script>
+</script> 
 
-<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="//yandex.st/share/share.js"
+charset="utf-8"></script>
 
 <? if ($USER->IsAdmin()): ?>
 <? else: ?>
 
-<script>
-	(function (w, d, u) {
-		var s = d.createElement('script');
-		s.async = true;
-		s.src = u + '?' + (Date.now() / 60000 | 0);
-		var h = d.getElementsByTagName('script')[0];
-		h.parentNode.insertBefore(s, h);
-	})(window, document, 'https://portal.easymatrix.ru/upload/crm/site_button/loader_2_30bynk.js');
+    <script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b17186540/crm/site_button/loader_5_r5kz34.js');
 </script>
+<script type="text/javascript" src="//cp.onicon.ru/loader/5cdfbb06b887ee631a8b492e.js"></script>
 
 <?endif?>
 
 </body>
-
 </html>
