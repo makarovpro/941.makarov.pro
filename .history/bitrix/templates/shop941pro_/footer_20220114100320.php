@@ -146,10 +146,13 @@ $APPLICATION->IncludeFile(
 <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
 
 <script>
-        (function(w,d,u){
-                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://portal.easymatrix.ru/upload/crm/site_button/loader_1_dezlc8.js');
+	(function (w, d, u) {
+		var s = d.createElement('script');
+		s.async = true;
+		s.src = u + '?' + (Date.now() / 60000 | 0);
+		var h = d.getElementsByTagName('script')[0];
+		h.parentNode.insertBefore(s, h);
+	})(window, document, 'https://portal.easymatrix.ru/upload/crm/site_button/loader_2_30bynk.js');
 </script>
 
 
