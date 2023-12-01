@@ -32,7 +32,10 @@
                             <?else:?><?= $arPrice["PRINT_VALUE"] ?><?endif;?>
 
                             <?endif;?>
-                            <?endforeach;?><? if ($arElement["DISPLAY_PROPERTIES"]["ED_IZM"]){?>/<?=$arElement["DISPLAY_PROPERTIES"]["ED_IZM"]["VALUE"];?><?}?>
+                            <?endforeach;?>
+														
+														
+														<? if ($arElement["DISPLAY_PROPERTIES"]["ED_IZM"]){?>/<?=$arElement["DISPLAY_PROPERTIES"]["ED_IZM"]["VALUE"];?><?}?>
                             
                             
                             
